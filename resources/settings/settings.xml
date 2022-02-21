@@ -1,0 +1,22 @@
+
+
+<settings>
+    <setting propertyKey="@Properties.appVersion" title="@Strings.AppVersionTitle">
+        <settingConfig type="alphaNumeric" readonly="true" />
+    </setting>
+
+    <setting propertyKey="@Properties.warmUpTimeSeconds" title="@Strings.warmUpTimeSeconds">
+        <settingConfig type="numeric" min="10" max ="1800" />
+    </setting>
+
+    <setting propertyKey="@Properties.pauseTimeSeconds" title="@Strings.pauseTimeSeconds">
+        <settingConfig type="numeric" min="10" max ="300" />
+    </setting>
+
+    <setting propertyKey="@Properties.workoutNumber" title="@Strings.workout" prompt="@Strings.selectWorkout">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.fartlekEasy</listEntry>
+            <listEntry value="1">@Strings.test</listEntry>
+        </settingConfig>
+    </setting>
+</settings>
