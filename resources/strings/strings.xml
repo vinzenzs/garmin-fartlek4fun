@@ -7,8 +7,15 @@
     <string id="warmUpTimeSeconds">Warm Up in seconds</string>
     <string id="pauseTimeSeconds">Pause between Sets</string>
 
+    <string id="workoutType">Workout Type</string>
+    <string id="selectWorkoutType">Select the Workout Type</string>
+    <string id="predefinedWk">Predefined Workout</string>
+    <string id="randomWk">Random Workout</string>
+    <string id="distanceWk">Distance Workout</string>
+
     <string id="workout">Fartlek Workout</string>
     <string id="selectWorkout">Select the Fartlek</string>
     <string id="fartlekEasy">Fartlek Easy</string>
+    
     <string id="test">Test</string>
 </strings>

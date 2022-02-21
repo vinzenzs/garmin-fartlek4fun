@@ -3,4 +3,5 @@
     <property id="warmUpTimeSeconds" type="number">300</property>
     <property id="pauseTimeSeconds" type="number">60</property>
     <property id="workoutNumber" type="number">0</property>
+    <property id="workoutType" type="number">0</property>
 </properties>

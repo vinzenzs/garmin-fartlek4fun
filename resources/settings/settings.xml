@@ -13,6 +13,14 @@
         <settingConfig type="numeric" min="10" max ="300" />
     </setting>
 
+    <setting propertyKey="@Properties.workoutType" title="@Strings.workoutType" prompt="@Strings.selectWorkoutType">
+        <settingConfig type="list">
+            <listEntry value="0">@Strings.predefinedWk</listEntry>
+            <listEntry value="1">@Strings.randomWk</listEntry>
+            <listEntry value="2">@Strings.distanceWk</listEntry>
+        </settingConfig>
+    </setting>
+
     <setting propertyKey="@Properties.workoutNumber" title="@Strings.workout" prompt="@Strings.selectWorkout">
         <settingConfig type="list">
             <listEntry value="0">@Strings.fartlekEasy</listEntry>

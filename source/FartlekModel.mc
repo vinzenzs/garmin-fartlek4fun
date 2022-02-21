@@ -4,6 +4,7 @@ class FartlekModel {
 
     public var mode;
 
+    hidden var mWorkoutType;
     hidden var mWorkouts;
     hidden var mWkNumber;
     hidden var mWKRound;
@@ -18,6 +19,7 @@ class FartlekModel {
 
         var app = Application.getApp();
         var workoutNumber = app.getProperty("workoutNumber") == null? 0 : app.getProperty("workoutNumber");
+        mWorkoutType = app.getProperty("workoutType") == null? 0 : app.getProperty("workoutType");
         mCounter = app.getProperty("warmUpTimeSeconds") == null? 300 : app.getProperty("warmUpTimeSeconds");
         mPauseTime = app.getProperty("pauseTimeSeconds") == null? 300 : app.getProperty("pauseTimeSeconds");
 
@@ -26,19 +28,18 @@ class FartlekModel {
         for (var i = 0; i < array[workoutNumber]["data"].size(); i++){
             mWorkouts.add(array[workoutNumber]["data"][i]);
         }
-        // var wk = new Fartlek(1, "4x30", 30, 30, 4);
-        // var wk1 = new Fartlek(2, "8x60", 60, 60, 8);
-        // var wk2 = new Fartlek(3, "4x30", 30, 60, 4);
-        // var wk = new Fartlek(1, "4x30", 5, 5, 2);
-        // var wk1 = new Fartlek(2, "8x60", 5, 5, 2);
-        // var wk2 = new Fartlek(3, "4x30", 5, 5, 2);
-        // mWorkouts.add(wk);
-        // mWorkouts.add(wk1);
-        // mWorkouts.add(wk2);
     }
 
     function tick() {
+        switch(mWorkoutType){
+            case 0:
+                definedWorkout();
+            break;
+        }
 
+    }
+
+    function definedWorkout() {
         if(mCounter == 3){
             vibrate();
         }
@@ -72,6 +73,13 @@ class FartlekModel {
         mCounter--;
     }
     
+    function randomWorkout() {
+    
+    }
+
+    function distanceWorkout() {
+
+    }
 
     function vibrate(){
         if (Attention has :vibrate) {
